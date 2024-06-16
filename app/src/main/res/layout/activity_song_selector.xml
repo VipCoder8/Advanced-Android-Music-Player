@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/main_background_color">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/next_button"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:background="@drawable/button_background"
+        android:fontFamily="@font/nunito_regular"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        android:text="@string/song_selector_activity_next_button_text"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/back_button"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:background="@drawable/button_background"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="@font/nunito_regular"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        android:text="@string/song_selector_activity_back_button_text"
+        app:layout_constraintEnd_toStartOf="@id/next_button"/>
+    
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/songs_selection_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@id/next_button"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

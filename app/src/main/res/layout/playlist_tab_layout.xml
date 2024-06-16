@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/playlist_tab_layout_height"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/playlist_tab_background"
+    android:elevation="21dp">
+
+    <TextView
+        android:id="@+id/playlist_title_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito_regular"
+        android:textSize="21sp"
+        android:textColor="@color/white"
+        android:maxLength="21"
+        android:text="A nice Playlist with 21 length limit"
+        android:layout_marginLeft="32dp"
+        android:layout_marginBottom="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/playlist_song_count_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito_regular"
+        android:textSize="18sp"
+        android:textColor="@color/gray"
+        android:text="12 songs"
+        app:layout_constraintStart_toStartOf="@id/playlist_title_view"
+        app:layout_constraintTop_toBottomOf="@id/playlist_title_view"/>
+
+    <ImageButton
+        android:id="@+id/edit_playlist_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/edit_icon"
+        android:background="@null"
+        android:layout_marginLeft="21dp"
+        app:layout_constraintStart_toEndOf="@id/playlist_title_view"
+        app:layout_constraintBottom_toBottomOf="@id/playlist_title_view"
+        app:layout_constraintTop_toTopOf="@id/playlist_title_view"/>
+
+    <ImageButton
+        android:id="@+id/delete_playlist_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/delete_icon"
+        android:background="@null"
+        android:layout_marginLeft="32dp"
+        app:layout_constraintStart_toEndOf="@id/edit_playlist_button"
+        app:layout_constraintBottom_toBottomOf="@id/playlist_title_view"
+        app:layout_constraintTop_toTopOf="@id/playlist_title_view"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="false"
+        android:focusable="false"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

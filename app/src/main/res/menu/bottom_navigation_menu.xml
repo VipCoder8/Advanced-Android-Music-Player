@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home_item"
+        android:title="@string/bottom_navigation_menu_home_title"
+        android:icon="@drawable/home_icon" />
+
+    <item
+        android:id="@+id/playlist_item"
+        android:title="@string/bottom_navigation_menu_playlist_title"
+        android:icon="@drawable/music_playlist_icon"
+        />
+
+</menu>

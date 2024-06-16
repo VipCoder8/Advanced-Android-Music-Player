@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="music_tab_background_color">#262a30</color>
+    <color name="playlist_tab_background_color">#262a30</color>
+    <color name="main_background_color">#31363F</color>
+    <color name="text_field_background_color">#76ABAE</color>
+    <color name="button_background_color">#76ABAE</color>
+    <color name="gray">#b1b7c1</color>
+</resources>

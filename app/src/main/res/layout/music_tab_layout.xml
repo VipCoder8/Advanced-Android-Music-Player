@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+        <data>
+                <import type="bee.corp.kbmplayer.utility.AdapterConfig"/>
+                <import type="android.view.View"/>
+                <variable
+                    name="config"
+                    type="bee.corp.kbmplayer.utility.AdapterConfig" />
+                <variable
+                    name="view"
+                    type="android.view.View"/>
+        </data>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/music_tab_layout_height"
+            android:background="@drawable/music_tab_background">
+                <ImageView
+                    android:id="@+id/play_image"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/play_icon"
+                    android:layout_marginStart="32dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/title_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="25sp"
+                    android:fontFamily="@font/nunito_regular"
+                    android:text="weapon_secondaryGun"
+                    android:maxLength="19"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/play_image"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginBottom="18dp"/>
+
+                <TextView
+                    android:id="@+id/duration_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00:05:10"
+                    android:textColor="@color/white"
+                    android:layout_marginStart="15dp"
+                    app:layout_constraintStart_toEndOf="@id/author_text_view"
+                    app:layout_constraintTop_toBottomOf="@id/title_text_view"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/nunito_regular"/>
+
+                <TextView
+                    android:id="@+id/author_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@id/title_text_view"
+                    app:layout_constraintTop_toBottomOf="@id/title_text_view"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/nunito_regular"
+                    android:maxLength="24"
+                    android:text="Thirty Seconds To Mars"
+                    android:textColor="@color/gray" />
+
+                <CheckBox
+                    android:id="@+id/selection_check_box"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="@{config.selecting ? view.VISIBLE : View.GONE}"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <ImageButton
+                    android:id="@+id/more_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:src="@drawable/more_icon"
+                    android:visibility="@{config.inPlaylist ? View.VISIBLE : View.GONE}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/music_tab_layout_height"
+                    android:clickable="false"
+                    android:focusable="false"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
